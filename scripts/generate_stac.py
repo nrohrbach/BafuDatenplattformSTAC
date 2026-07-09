@@ -1,35 +1,25 @@
 """
 BAFU Download → Statischer STAC-Katalog Generator
 ====================================================
-Dieses Skript liest die Dateiliste von data.bafu.admin.ch/download/
-und erstellt daraus einen statischen STAC-Katalog (JSON-Dateien).
-
-STAC = SpatioTemporal Asset Catalog (Standard für Geodaten-Kataloge)
-Dokumentation: https://stacspec.org
+Liest den S3-Bucket data.bafu.admin.ch/download/ rekursiv via
+AWS S3 ListObjectsV2 (XML-API) und erstellt einen statischen STAC-Katalog.
 """
 
 import json
 import re
-import hashlib
 import os
-import requests
+import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 from pathlib import Path
-from bs4 import BeautifulSoup
+import requests
 
+# ─── Konfiguration ────────────────────────────────────────────────────────────
 
-# ─── Konfiguration ───────────────────────────────────────────────────────────
-
-BASE_URL = "https://data.bafu.admin.ch/download/"
+BASE_URL   = "https://data.bafu.admin.ch/download/"
 OUTPUT_DIR = Path("catalog")
 
-CATALOG_ID = "bafu-opendata"
-CATALOG_TITLE = "BAFU Open Data Downloads"
-CATALOG_DESCRIPTION = (
-    "Statischer STAC-Katalog der Open Data Downloads des "
-    "Bundesamts für Umwelt (BAFU). Automatisch generiert aus "
-    f"{BASE_URL}"
-)
+# S3 XML Namespace
+NS = {"s3": "http://s3.amazonaws.com/doc/2006-03-01/"}
 
 # Dateiendungen → STAC Media Types
 MEDIA_TYPES = {
@@ -46,112 +36,134 @@ MEDIA_TYPES = {
     ".tif":     "image/tiff",
     ".tiff":    "image/tiff",
     ".nc":      "application/x-netcdf",
+    ".parquet": "application/parquet",
 }
 
+SESSION = requests.Session()
+SESSION.headers["User-Agent"] = "BAFU-STAC-Generator/1.0"
 
-# ─── Hilfsfunktionen ─────────────────────────────────────────────────────────
+# ─── S3 Listing ───────────────────────────────────────────────────────────────
 
-def make_id(filename: str) -> str:
-    """Erstellt eine sichere ID aus dem Dateinamen (ohne Sonderzeichen)."""
-    stem = Path(filename).stem
-    # Nur Buchstaben, Zahlen, Bindestriche erlaubt
-    safe = re.sub(r"[^a-zA-Z0-9\-_]", "-", stem).lower()
+def s3_list(prefix: str = "") -> tuple[list[str], list[str]]:
+    """
+    Ruft eine Seite des S3 ListObjectsV2 auf.
+    Gibt (Dateien, Unterordner) zurück.
+    Paginiert automatisch via ContinuationToken.
+    """
+    files   = []
+    folders = []
+    token   = None
+
+    while True:
+        params = {
+            "list-type": "2",
+            "delimiter": "/",
+            "prefix":    prefix,
+        }
+        if token:
+            params["continuation-token"] = token
+
+        resp = SESSION.get(BASE_URL, params=params, timeout=30)
+        resp.raise_for_status()
+
+        root = ET.fromstring(resp.content)
+
+        # Dateien (Contents)
+        for obj in root.findall("s3:Contents", NS):
+            key = obj.findtext("s3:Key", namespaces=NS) or ""
+            if not key.endswith("/"):          # Ordner-Platzhalter überspringen
+                files.append(key)
+
+        # Unterordner (CommonPrefixes)
+        for cp in root.findall("s3:CommonPrefixes", NS):
+            p = cp.findtext("s3:Prefix", namespaces=NS) or ""
+            folders.append(p)
+
+        # Nächste Seite?
+        is_truncated = root.findtext("s3:IsTruncated", namespaces=NS) or ""
+        if is_truncated.lower() == "true":
+            token = root.findtext("s3:NextContinuationToken", namespaces=NS)
+        else:
+            break
+
+    return files, folders
+
+
+def crawl_all_files() -> list[str]:
+    """
+    Traversiert den S3-Bucket rekursiv und gibt alle Datei-Keys zurück.
+    Nutzt BFS (Breitensuche) über die Ordnerstruktur.
+    """
+    print("🔍 Crawle S3-Bucket ...")
+    all_files = []
+    queue = [""]   # Start: Root-Prefix (leer)
+
+    while queue:
+        prefix = queue.pop(0)
+        label  = prefix or "(root)"
+        print(f"  📁 {label}")
+
+        files, folders = s3_list(prefix)
+        all_files.extend(files)
+        queue.extend(folders)
+
+        print(f"     → {len(files)} Dateien, {len(folders)} Unterordner")
+
+    print(f"\n✅ Total: {len(all_files)} Dateien gefunden.")
+    return all_files
+
+
+# ─── Hilfsfunktionen ──────────────────────────────────────────────────────────
+
+def make_id(key: str) -> str:
+    """Erstellt eine sichere, einzigartige STAC-ID aus dem S3-Key."""
+    safe = re.sub(r"[^a-zA-Z0-9\-_]", "-", key).lower()
     safe = re.sub(r"-+", "-", safe).strip("-")
-    return safe or hashlib.md5(filename.encode()).hexdigest()[:8]
+    return safe[:200]
 
 
-def guess_media_type(filename: str) -> str:
-    """Gibt den MIME-Type basierend auf der Dateiendung zurück."""
-    suffix = Path(filename).suffix.lower()
+def guess_media_type(key: str) -> str:
+    suffix = Path(key).suffix.lower()
     return MEDIA_TYPES.get(suffix, "application/octet-stream")
 
 
 def now_iso() -> str:
-    """Gibt die aktuelle Zeit als ISO 8601 String zurück."""
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
-# ─── Scraping ────────────────────────────────────────────────────────────────
-
-def fetch_file_list(url: str) -> list[dict]:
+def extract_datetime(key: str) -> str | None:
     """
-    Liest die Dateiliste von der BAFU Download-Seite.
-    
-    Die Seite zeigt die Dateien als HTML-Tabelle oder Liste an.
-    Wir lesen alle <a>-Links, die auf Dateien zeigen.
+    Versucht ein Datum aus dem S3-Key zu lesen.
+    Beispiel: water/karst-groundwater/v2026-03-17/... → 2026-03-17
     """
-    print(f"📥 Lade Dateiliste von {url} ...")
-    
-    headers = {
-        "User-Agent": "BAFU-STAC-Generator/1.0 (github.com/DEIN-USERNAME/bafu-stac)"
-    }
-    
-    response = requests.get(url, headers=headers, timeout=30)
-    response.raise_for_status()
-    
-    soup = BeautifulSoup(response.text, "html.parser")
-    
-    files = []
-    seen = set()
-    
-    for link in soup.find_all("a", href=True):
-        href = link["href"]
-        
-        # Nur Dateien (mit Endung), keine Verzeichnisse oder externe Links
-        if not href or href.startswith("http") and BASE_URL not in href:
-            continue
-        
-        # Absoluten URL bauen
-        if href.startswith("/"):
-            file_url = "https://data.bafu.admin.ch" + href
-        elif href.startswith("http"):
-            file_url = href
-        else:
-            file_url = url.rstrip("/") + "/" + href.lstrip("/")
-        
-        # Nur bekannte Dateiendungen
-        filename = Path(href.split("?")[0]).name
-        suffix = Path(filename).suffix.lower()
-        
-        if not suffix or suffix not in MEDIA_TYPES:
-            continue
-        
-        if file_url in seen:
-            continue
-        seen.add(file_url)
-        
-        # Link-Text als Titel verwenden (falls vorhanden)
-        title = link.get_text(strip=True) or filename
-        
-        files.append({
-            "filename": filename,
-            "url": file_url,
-            "title": title,
-        })
-    
-    print(f"✅ {len(files)} Dateien gefunden.")
-    return files
+    match = re.search(r"v(\d{4}-\d{2}-\d{2})", key)
+    if match:
+        return match.group(1) + "T00:00:00Z"
+    match = re.search(r"(\d{4}-\d{2}-\d{2})", key)
+    if match:
+        return match.group(1) + "T00:00:00Z"
+    return None
 
 
-# ─── STAC-Generierung ────────────────────────────────────────────────────────
+# ─── STAC-Generierung ─────────────────────────────────────────────────────────
 
-def make_stac_item(file_info: dict, generated_at: str) -> dict:
-    """
-    Erstellt ein einzelnes STAC Item (= eine Datei im Katalog).
-    
-    STAC Items beschreiben einzelne Datensätze mit Metadaten.
-    Da wir keine räumlichen Infos haben, verwenden wir die ganze Schweiz
-    als Bounding Box.
-    """
-    item_id = make_id(file_info["filename"])
-    media_type = guess_media_type(file_info["filename"])
-    
+def make_stac_item(key: str, generated_at: str) -> dict:
+    file_url   = BASE_URL + key
+    item_id    = make_id(key)
+    media_type = guess_media_type(key)
+    title      = Path(key).name
+    dt         = extract_datetime(key) or generated_at
+
+    # Ordnerstruktur als zusätzliche Metadaten
+    parts = key.split("/")
+    theme = parts[0] if len(parts) > 1 else "unknown"
+
     return {
         "type": "Feature",
         "stac_version": "1.0.0",
         "id": item_id,
         "geometry": {
-            # Bounding Box Schweiz (WGS84)
+            # Bounding Box Schweiz (WGS84) – als Fallback
             "type": "Polygon",
             "coordinates": [[
                 [5.9559, 45.8183],
@@ -163,40 +175,27 @@ def make_stac_item(file_info: dict, generated_at: str) -> dict:
         },
         "bbox": [5.9559, 45.8183, 10.4923, 47.8084],
         "properties": {
-            "title": file_info["title"],
-            "description": f"BAFU Open Data Datei: {file_info['filename']}",
-            "datetime": generated_at,  # Zeitpunkt der Kataloggenerierung
-            "created": generated_at,
-            "providers": [
-                {
-                    "name": "Bundesamt für Umwelt (BAFU)",
-                    "roles": ["producer", "licensor"],
-                    "url": "https://www.bafu.admin.ch",
-                }
-            ],
+            "title":       title,
+            "datetime":    dt,
+            "created":     generated_at,
+            "bafu:key":    key,
+            "bafu:theme":  theme,
+            "providers": [{
+                "name":  "Bundesamt für Umwelt (BAFU)",
+                "roles": ["producer", "licensor"],
+                "url":   "https://www.bafu.admin.ch",
+            }],
         },
         "links": [
-            {
-                "rel": "self",
-                "href": f"./items/{item_id}.json",
-                "type": "application/geo+json",
-            },
-            {
-                "rel": "root",
-                "href": "../catalog.json",
-                "type": "application/json",
-            },
-            {
-                "rel": "parent",
-                "href": "../catalog.json",
-                "type": "application/json",
-            },
+            {"rel": "self",   "href": f"./items/{item_id}.json", "type": "application/geo+json"},
+            {"rel": "root",   "href": "../catalog.json",         "type": "application/json"},
+            {"rel": "parent", "href": "../catalog.json",         "type": "application/json"},
         ],
         "assets": {
             "data": {
-                "href": file_info["url"],
-                "type": media_type,
-                "title": file_info["title"],
+                "href":  file_url,
+                "type":  media_type,
+                "title": title,
                 "roles": ["data"],
             }
         },
@@ -204,87 +203,78 @@ def make_stac_item(file_info: dict, generated_at: str) -> dict:
 
 
 def make_stac_catalog(items: list[dict], generated_at: str) -> dict:
-    """
-    Erstellt den STAC Root Catalog (Einstiegspunkt des Katalogs).
-    """
-    item_links = [
-        {
-            "rel": "item",
-            "href": f"./items/{item['id']}.json",
-            "type": "application/geo+json",
-            "title": item["properties"]["title"],
-        }
-        for item in items
-    ]
-    
     return {
-        "type": "Catalog",
-        "id": CATALOG_ID,
-        "stac_version": "1.0.0",
-        "title": CATALOG_TITLE,
-        "description": CATALOG_DESCRIPTION,
+        "type":          "Catalog",
+        "id":            "bafu-opendata",
+        "stac_version":  "1.0.0",
+        "title":         "BAFU Open Data Downloads",
+        "description":   (
+            "Statischer STAC-Katalog der Open Data Downloads des "
+            f"Bundesamts für Umwelt (BAFU). Quelle: {BASE_URL}"
+        ),
         "links": [
-            {
-                "rel": "self",
-                "href": "./catalog.json",
-                "type": "application/json",
-            },
-            *item_links,
-        ],
-        "conformsTo": [
-            "https://api.stacspec.org/v1.0.0/core",
+            {"rel": "self", "href": "./catalog.json", "type": "application/json"},
+            *[
+                {
+                    "rel":   "item",
+                    "href":  f"./items/{item['id']}.json",
+                    "type":  "application/geo+json",
+                    "title": item["properties"]["title"],
+                }
+                for item in items
+            ],
         ],
         "bafu:generated_at": generated_at,
-        "bafu:source_url": BASE_URL,
+        "bafu:source_url":   BASE_URL,
+        "bafu:item_count":   len(items),
     }
 
 
-# ─── Datei-Export ────────────────────────────────────────────────────────────
+# ─── Datei-Export ─────────────────────────────────────────────────────────────
 
 def write_json(path: Path, data: dict) -> None:
-    """Schreibt ein Dictionary als formatiertes JSON."""
     path.parent.mkdir(parents=True, exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
-    print(f"  💾 {path}")
 
 
-# ─── Hauptprogramm ───────────────────────────────────────────────────────────
+# ─── Hauptprogramm ────────────────────────────────────────────────────────────
 
 def main():
     print("=" * 60)
     print("BAFU Download → STAC Katalog Generator")
     print("=" * 60)
-    
+
     generated_at = now_iso()
-    
-    # 1. Dateiliste laden
-    files = fetch_file_list(BASE_URL)
-    
-    if not files:
-        print("❌ Keine Dateien gefunden! Bitte Seite manuell prüfen.")
+
+    # 1. Alle S3-Keys holen
+    keys = crawl_all_files()
+
+    # Nur bekannte Dateiendungen behalten
+    known_ext = set(MEDIA_TYPES.keys())
+    keys = [k for k in keys if Path(k).suffix.lower() in known_ext]
+    print(f"   (davon mit bekannter Endung: {len(keys)})")
+
+    if not keys:
+        print("❌ Keine Dateien gefunden!")
         return
-    
-    # 2. STAC Items erstellen
-    print(f"\n📦 Erstelle {len(files)} STAC Items ...")
-    items = []
-    items_dir = OUTPUT_DIR / "items"
-    
-    for file_info in files:
-        item = make_stac_item(file_info, generated_at)
+
+    # 2. STAC Items
+    print(f"\n📦 Erstelle {len(keys)} STAC Items ...")
+    items      = []
+    items_dir  = OUTPUT_DIR / "items"
+
+    for key in keys:
+        item = make_stac_item(key, generated_at)
         items.append(item)
         write_json(items_dir / f"{item['id']}.json", item)
-    
-    # 3. Root Catalog erstellen
-    print(f"\n📂 Erstelle Root Catalog ...")
+
+    # 3. Root Catalog
+    print("📂 Erstelle catalog.json ...")
     catalog = make_stac_catalog(items, generated_at)
     write_json(OUTPUT_DIR / "catalog.json", catalog)
-    
-    # 4. Zusammenfassung
-    print(f"\n✅ Fertig!")
-    print(f"   Katalog:  {OUTPUT_DIR}/catalog.json")
-    print(f"   Items:    {len(items)} Dateien in {items_dir}/")
-    print(f"   Zeitpunkt: {generated_at}")
+
+    print(f"\n✅ Fertig! {len(items)} Items in {OUTPUT_DIR}/")
 
 
 if __name__ == "__main__":
