@@ -1,0 +1,48 @@
+name: STAC Katalog aktualisieren
+
+# Wann soll der Workflow laufen?
+on:
+  # Automatisch jeden Montag um 06:00 Uhr (UTC)
+  schedule:
+    - cron: "0 6 * * 1"
+  
+  # Manuell über GitHub auslösen (nützlich zum Testen)
+  workflow_dispatch:
+
+jobs:
+  update:
+    name: Katalog generieren und deployen
+    runs-on: ubuntu-latest
+
+    # Erlaubnis: der Workflow darf ins Repository schreiben
+    permissions:
+      contents: write
+
+    steps:
+      # Schritt 1: Repository auschecken
+      - name: Repository auschecken
+        uses: actions/checkout@v4
+
+      # Schritt 2: Python einrichten
+      - name: Python einrichten
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Schritt 3: Abhängigkeiten installieren
+      - name: Abhängigkeiten installieren
+        run: pip install -r requirements.txt
+
+      # Schritt 4: Skript ausführen → generiert catalog/ Ordner
+      - name: STAC Katalog generieren
+        run: python scripts/generate_stac.py
+
+      # Schritt 5: Änderungen committen und pushen
+      - name: Katalog committen
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add catalog/
+          # Nur committen wenn es Änderungen gibt
+          git diff --staged --quiet || git commit -m "chore: STAC Katalog aktualisiert $(date -u +%Y-%m-%d)"
+          git push
