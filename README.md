@@ -4,7 +4,10 @@ Dieses Repository generiert automatisch einen statischen [STAC-Katalog](https://
 aus den Open Data Downloads des Bundesamts für Umwelt (BAFU).
 
 **Quelle:** https://data.bafu.admin.ch/download/
-**Katalog:** `catalog/catalog.json`
+
+**Katalog:** https://nrohrbach.github.io/BafuDatenplattformSTAC/catalog.json
+
+**STAC-Browser** https://radiantearth.github.io/stac-browser/#/external/nrohrbach.github.io/BafuDatenplattformSTAC/catalog.json?.language=de
 
 ## Was ist STAC?
 
