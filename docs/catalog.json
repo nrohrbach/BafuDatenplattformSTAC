@@ -12,18 +12,6 @@
     },
     {
       "rel": "child",
-      "href": "./error.html/collection.json",
-      "type": "application/json",
-      "title": "error.html"
-    },
-    {
-      "rel": "child",
-      "href": "./index.html/collection.json",
-      "type": "application/json",
-      "title": "index.html"
-    },
-    {
-      "rel": "child",
       "href": "./water/groundwater/collection.json",
       "type": "application/json",
       "title": "water/groundwater"
@@ -47,6 +35,6 @@
       "title": "water/observations"
     }
   ],
-  "bafu:generated_at": "2026-07-10T07:19:38Z",
-  "bafu:collection_count": 6
+  "bafu:generated_at": "2026-07-10T07:22:58Z",
+  "bafu:collection_count": 4
 }
