@@ -25,6 +25,9 @@ jobs:
       - name: Abhängigkeiten installieren
         run: pip install -r requirements.txt
 
+      - name: docs/ Ordner leeren
+        run: find docs/ -mindepth 1 ! -name '.gitkeep' ! -name '.nojekyll' -delete
+
       - name: STAC Katalog generieren
         run: python scripts/generate_stac.py
 
