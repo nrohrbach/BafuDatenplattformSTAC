@@ -325,7 +325,10 @@ def main():
     all_keys = crawl_all_files()
     keys = [
         k for k in all_keys
-        if not k.endswith("/") and not k.startswith("assets/")
+        if not k.endswith("/")
+        and not k.startswith("assets/")
+        and "index.html" not in k
+        and "error.html" not in k
     ]
     print(f"   (relevante Dateien: {len(keys)})")
 
