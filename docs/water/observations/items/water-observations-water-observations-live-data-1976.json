@@ -1,0 +1,846 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "water-observations-water-observations-live-data-1976",
+  "collection": "water/observations",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          5.9559,
+          45.8183
+        ],
+        [
+          10.4923,
+          45.8183
+        ],
+        [
+          10.4923,
+          47.8084
+        ],
+        [
+          5.9559,
+          47.8084
+        ],
+        [
+          5.9559,
+          45.8183
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    5.9559,
+    45.8183,
+    10.4923,
+    47.8084
+  ],
+  "properties": {
+    "title": "1976",
+    "datetime": "1976-01-01T00:00:00Z",
+    "created": "2026-07-10T05:41:41Z",
+    "providers": [
+      {
+        "name": "Bundesamt für Umwelt (BAFU)",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.bafu.admin.ch"
+      }
+    ]
+  },
+  "links": [
+    {
+      "rel": "self",
+      "href": "./items/water-observations-water-observations-live-data-1976.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "water_observations_1976_data_10min_mean_197601-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_10min_mean_197601.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_10min_mean_197601.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_10min_mean_197602-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_10min_mean_197602.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_10min_mean_197602.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_10min_mean_197603-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_10min_mean_197603.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_10min_mean_197603.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_10min_mean_197604-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_10min_mean_197604.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_10min_mean_197604.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_10min_mean_197605-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_10min_mean_197605.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_10min_mean_197605.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_10min_mean_197606-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_10min_mean_197606.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_10min_mean_197606.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_10min_mean_197607-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_10min_mean_197607.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_10min_mean_197607.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_10min_mean_197608-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_10min_mean_197608.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_10min_mean_197608.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_10min_mean_197609-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_10min_mean_197609.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_10min_mean_197609.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_10min_mean_197610-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_10min_mean_197610.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_10min_mean_197610.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_10min_mean_197611-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_10min_mean_197611.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_10min_mean_197611.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_10min_mean_197612-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_10min_mean_197612.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_10min_mean_197612.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1day_max_197601-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1day_max_197601.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1day_max_197601.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1day_max_197602-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1day_max_197602.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1day_max_197602.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1day_max_197603-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1day_max_197603.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1day_max_197603.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1day_max_197604-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1day_max_197604.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1day_max_197604.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1day_max_197605-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1day_max_197605.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1day_max_197605.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1day_max_197606-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1day_max_197606.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1day_max_197606.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1day_max_197607-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1day_max_197607.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1day_max_197607.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1day_max_197608-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1day_max_197608.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1day_max_197608.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1day_max_197609-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1day_max_197609.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1day_max_197609.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1day_max_197610-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1day_max_197610.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1day_max_197610.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1day_max_197611-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1day_max_197611.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1day_max_197611.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1day_max_197612-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1day_max_197612.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1day_max_197612.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1day_mean_197601-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1day_mean_197601.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1day_mean_197601.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1day_mean_197602-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1day_mean_197602.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1day_mean_197602.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1day_mean_197603-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1day_mean_197603.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1day_mean_197603.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1day_mean_197604-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1day_mean_197604.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1day_mean_197604.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1day_mean_197605-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1day_mean_197605.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1day_mean_197605.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1day_mean_197606-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1day_mean_197606.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1day_mean_197606.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1day_mean_197607-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1day_mean_197607.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1day_mean_197607.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1day_mean_197608-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1day_mean_197608.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1day_mean_197608.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1day_mean_197609-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1day_mean_197609.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1day_mean_197609.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1day_mean_197610-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1day_mean_197610.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1day_mean_197610.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1day_mean_197611-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1day_mean_197611.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1day_mean_197611.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1day_mean_197612-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1day_mean_197612.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1day_mean_197612.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1day_min_197601-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1day_min_197601.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1day_min_197601.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1day_min_197602-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1day_min_197602.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1day_min_197602.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1day_min_197603-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1day_min_197603.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1day_min_197603.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1day_min_197604-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1day_min_197604.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1day_min_197604.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1day_min_197605-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1day_min_197605.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1day_min_197605.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1day_min_197606-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1day_min_197606.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1day_min_197606.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1day_min_197607-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1day_min_197607.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1day_min_197607.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1day_min_197608-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1day_min_197608.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1day_min_197608.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1day_min_197609-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1day_min_197609.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1day_min_197609.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1day_min_197610-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1day_min_197610.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1day_min_197610.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1day_min_197611-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1day_min_197611.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1day_min_197611.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1day_min_197612-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1day_min_197612.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1day_min_197612.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1hour_mean_197601-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1hour_mean_197601.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1hour_mean_197601.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1hour_mean_197602-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1hour_mean_197602.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1hour_mean_197602.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1hour_mean_197603-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1hour_mean_197603.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1hour_mean_197603.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1hour_mean_197604-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1hour_mean_197604.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1hour_mean_197604.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1hour_mean_197605-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1hour_mean_197605.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1hour_mean_197605.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1hour_mean_197606-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1hour_mean_197606.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1hour_mean_197606.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1hour_mean_197607-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1hour_mean_197607.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1hour_mean_197607.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1hour_mean_197608-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1hour_mean_197608.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1hour_mean_197608.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1hour_mean_197609-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1hour_mean_197609.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1hour_mean_197609.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1hour_mean_197610-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1hour_mean_197610.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1hour_mean_197610.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1hour_mean_197611-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1hour_mean_197611.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1hour_mean_197611.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1hour_mean_197612-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1hour_mean_197612.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1hour_mean_197612.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1month_max_197601-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1month_max_197601.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1month_max_197601.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1month_max_197602-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1month_max_197602.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1month_max_197602.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1month_max_197603-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1month_max_197603.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1month_max_197603.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1month_max_197604-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1month_max_197604.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1month_max_197604.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1month_max_197605-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1month_max_197605.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1month_max_197605.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1month_max_197606-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1month_max_197606.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1month_max_197606.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1month_max_197607-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1month_max_197607.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1month_max_197607.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1month_max_197608-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1month_max_197608.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1month_max_197608.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1month_max_197609-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1month_max_197609.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1month_max_197609.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1month_max_197610-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1month_max_197610.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1month_max_197610.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1month_max_197611-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1month_max_197611.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1month_max_197611.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1month_max_197612-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1month_max_197612.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1month_max_197612.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1month_mean_197601-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1month_mean_197601.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1month_mean_197601.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1month_mean_197602-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1month_mean_197602.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1month_mean_197602.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1month_mean_197603-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1month_mean_197603.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1month_mean_197603.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1month_mean_197604-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1month_mean_197604.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1month_mean_197604.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1month_mean_197605-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1month_mean_197605.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1month_mean_197605.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1month_mean_197606-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1month_mean_197606.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1month_mean_197606.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1month_mean_197607-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1month_mean_197607.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1month_mean_197607.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1month_mean_197608-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1month_mean_197608.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1month_mean_197608.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1month_mean_197609-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1month_mean_197609.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1month_mean_197609.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1month_mean_197610-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1month_mean_197610.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1month_mean_197610.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1month_mean_197611-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1month_mean_197611.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1month_mean_197611.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1month_mean_197612-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1month_mean_197612.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1month_mean_197612.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1month_min_197601-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1month_min_197601.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1month_min_197601.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1month_min_197602-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1month_min_197602.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1month_min_197602.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1month_min_197603-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1month_min_197603.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1month_min_197603.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1month_min_197604-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1month_min_197604.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1month_min_197604.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1month_min_197605-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1month_min_197605.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1month_min_197605.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1month_min_197606-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1month_min_197606.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1month_min_197606.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1month_min_197607-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1month_min_197607.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1month_min_197607.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1month_min_197608-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1month_min_197608.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1month_min_197608.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1month_min_197609-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1month_min_197609.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1month_min_197609.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1month_min_197610-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1month_min_197610.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1month_min_197610.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1month_min_197611-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1month_min_197611.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1month_min_197611.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_1976_data_1month_min_197612-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/1976/water_observations_1976_data_1month_min_197612.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_1976_data_1month_min_197612.csv.gz",
+      "roles": [
+        "data"
+      ]
+    }
+  }
+}

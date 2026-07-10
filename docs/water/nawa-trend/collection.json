@@ -1,0 +1,143 @@
+{
+  "type": "Collection",
+  "id": "water/nawa-trend",
+  "stac_version": "1.0.0",
+  "title": "Water / Nawa Trend",
+  "description": "BAFU Open Data: water/nawa-trend",
+  "license": "proprietary",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          5.9559,
+          45.8183,
+          10.4923,
+          47.8084
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "1970-01-01T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-nawa-trend-water-nawa-trend-v2026-03-02-data-water_nawa-trend_data_2011-csv.json",
+      "type": "application/geo+json",
+      "title": "water_nawa-trend_data_2011.csv"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-nawa-trend-water-nawa-trend-v2026-03-02-data-water_nawa-trend_data_2012-csv.json",
+      "type": "application/geo+json",
+      "title": "water_nawa-trend_data_2012.csv"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-nawa-trend-water-nawa-trend-v2026-03-02-data-water_nawa-trend_data_2013-csv.json",
+      "type": "application/geo+json",
+      "title": "water_nawa-trend_data_2013.csv"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-nawa-trend-water-nawa-trend-v2026-03-02-data-water_nawa-trend_data_2014-csv.json",
+      "type": "application/geo+json",
+      "title": "water_nawa-trend_data_2014.csv"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-nawa-trend-water-nawa-trend-v2026-03-02-data-water_nawa-trend_data_2015-csv.json",
+      "type": "application/geo+json",
+      "title": "water_nawa-trend_data_2015.csv"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-nawa-trend-water-nawa-trend-v2026-03-02-data-water_nawa-trend_data_2016-csv.json",
+      "type": "application/geo+json",
+      "title": "water_nawa-trend_data_2016.csv"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-nawa-trend-water-nawa-trend-v2026-03-02-data-water_nawa-trend_data_2017-csv.json",
+      "type": "application/geo+json",
+      "title": "water_nawa-trend_data_2017.csv"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-nawa-trend-water-nawa-trend-v2026-03-02-data-water_nawa-trend_data_2018-csv.json",
+      "type": "application/geo+json",
+      "title": "water_nawa-trend_data_2018.csv"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-nawa-trend-water-nawa-trend-v2026-03-02-data-water_nawa-trend_data_2019-csv.json",
+      "type": "application/geo+json",
+      "title": "water_nawa-trend_data_2019.csv"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-nawa-trend-water-nawa-trend-v2026-03-02-data-water_nawa-trend_data_2020-csv.json",
+      "type": "application/geo+json",
+      "title": "water_nawa-trend_data_2020.csv"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-nawa-trend-water-nawa-trend-v2026-03-02-data-water_nawa-trend_data_2021-csv.json",
+      "type": "application/geo+json",
+      "title": "water_nawa-trend_data_2021.csv"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-nawa-trend-water-nawa-trend-v2026-03-02-data-water_nawa-trend_data_2022-csv.json",
+      "type": "application/geo+json",
+      "title": "water_nawa-trend_data_2022.csv"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-nawa-trend-water-nawa-trend-v2026-03-02-data-water_nawa-trend_data_2023-csv.json",
+      "type": "application/geo+json",
+      "title": "water_nawa-trend_data_2023.csv"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-nawa-trend-water-nawa-trend-v2026-03-02-data-water_nawa-trend_data_2024-csv.json",
+      "type": "application/geo+json",
+      "title": "water_nawa-trend_data_2024.csv"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-nawa-trend-water-nawa-trend-v2026-03-02-parameters-water_nawa-trend_parameters-csv.json",
+      "type": "application/geo+json",
+      "title": "water_nawa-trend_parameters.csv"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-nawa-trend-water-nawa-trend-v2026-03-02-stations-water_nawa-trend_stations-csv.json",
+      "type": "application/geo+json",
+      "title": "water_nawa-trend_stations.csv"
+    }
+  ],
+  "bafu:generated_at": "2026-07-10T05:41:41Z",
+  "bafu:item_count": 16
+}

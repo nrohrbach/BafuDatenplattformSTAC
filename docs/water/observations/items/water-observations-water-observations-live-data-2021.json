@@ -1,0 +1,846 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "water-observations-water-observations-live-data-2021",
+  "collection": "water/observations",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          5.9559,
+          45.8183
+        ],
+        [
+          10.4923,
+          45.8183
+        ],
+        [
+          10.4923,
+          47.8084
+        ],
+        [
+          5.9559,
+          47.8084
+        ],
+        [
+          5.9559,
+          45.8183
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    5.9559,
+    45.8183,
+    10.4923,
+    47.8084
+  ],
+  "properties": {
+    "title": "2021",
+    "datetime": "2021-01-01T00:00:00Z",
+    "created": "2026-07-10T05:41:41Z",
+    "providers": [
+      {
+        "name": "Bundesamt für Umwelt (BAFU)",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.bafu.admin.ch"
+      }
+    ]
+  },
+  "links": [
+    {
+      "rel": "self",
+      "href": "./items/water-observations-water-observations-live-data-2021.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "water_observations_2021_data_10min_mean_202101-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_10min_mean_202101.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_10min_mean_202101.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_10min_mean_202102-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_10min_mean_202102.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_10min_mean_202102.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_10min_mean_202103-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_10min_mean_202103.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_10min_mean_202103.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_10min_mean_202104-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_10min_mean_202104.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_10min_mean_202104.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_10min_mean_202105-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_10min_mean_202105.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_10min_mean_202105.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_10min_mean_202106-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_10min_mean_202106.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_10min_mean_202106.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_10min_mean_202107-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_10min_mean_202107.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_10min_mean_202107.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_10min_mean_202108-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_10min_mean_202108.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_10min_mean_202108.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_10min_mean_202109-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_10min_mean_202109.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_10min_mean_202109.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_10min_mean_202110-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_10min_mean_202110.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_10min_mean_202110.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_10min_mean_202111-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_10min_mean_202111.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_10min_mean_202111.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_10min_mean_202112-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_10min_mean_202112.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_10min_mean_202112.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1day_max_202101-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1day_max_202101.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1day_max_202101.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1day_max_202102-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1day_max_202102.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1day_max_202102.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1day_max_202103-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1day_max_202103.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1day_max_202103.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1day_max_202104-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1day_max_202104.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1day_max_202104.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1day_max_202105-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1day_max_202105.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1day_max_202105.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1day_max_202106-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1day_max_202106.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1day_max_202106.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1day_max_202107-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1day_max_202107.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1day_max_202107.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1day_max_202108-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1day_max_202108.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1day_max_202108.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1day_max_202109-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1day_max_202109.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1day_max_202109.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1day_max_202110-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1day_max_202110.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1day_max_202110.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1day_max_202111-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1day_max_202111.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1day_max_202111.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1day_max_202112-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1day_max_202112.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1day_max_202112.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1day_mean_202101-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1day_mean_202101.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1day_mean_202101.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1day_mean_202102-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1day_mean_202102.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1day_mean_202102.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1day_mean_202103-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1day_mean_202103.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1day_mean_202103.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1day_mean_202104-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1day_mean_202104.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1day_mean_202104.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1day_mean_202105-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1day_mean_202105.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1day_mean_202105.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1day_mean_202106-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1day_mean_202106.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1day_mean_202106.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1day_mean_202107-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1day_mean_202107.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1day_mean_202107.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1day_mean_202108-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1day_mean_202108.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1day_mean_202108.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1day_mean_202109-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1day_mean_202109.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1day_mean_202109.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1day_mean_202110-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1day_mean_202110.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1day_mean_202110.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1day_mean_202111-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1day_mean_202111.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1day_mean_202111.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1day_mean_202112-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1day_mean_202112.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1day_mean_202112.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1day_min_202101-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1day_min_202101.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1day_min_202101.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1day_min_202102-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1day_min_202102.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1day_min_202102.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1day_min_202103-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1day_min_202103.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1day_min_202103.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1day_min_202104-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1day_min_202104.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1day_min_202104.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1day_min_202105-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1day_min_202105.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1day_min_202105.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1day_min_202106-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1day_min_202106.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1day_min_202106.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1day_min_202107-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1day_min_202107.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1day_min_202107.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1day_min_202108-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1day_min_202108.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1day_min_202108.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1day_min_202109-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1day_min_202109.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1day_min_202109.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1day_min_202110-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1day_min_202110.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1day_min_202110.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1day_min_202111-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1day_min_202111.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1day_min_202111.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1day_min_202112-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1day_min_202112.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1day_min_202112.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1hour_mean_202101-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1hour_mean_202101.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1hour_mean_202101.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1hour_mean_202102-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1hour_mean_202102.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1hour_mean_202102.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1hour_mean_202103-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1hour_mean_202103.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1hour_mean_202103.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1hour_mean_202104-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1hour_mean_202104.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1hour_mean_202104.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1hour_mean_202105-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1hour_mean_202105.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1hour_mean_202105.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1hour_mean_202106-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1hour_mean_202106.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1hour_mean_202106.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1hour_mean_202107-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1hour_mean_202107.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1hour_mean_202107.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1hour_mean_202108-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1hour_mean_202108.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1hour_mean_202108.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1hour_mean_202109-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1hour_mean_202109.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1hour_mean_202109.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1hour_mean_202110-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1hour_mean_202110.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1hour_mean_202110.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1hour_mean_202111-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1hour_mean_202111.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1hour_mean_202111.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1hour_mean_202112-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1hour_mean_202112.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1hour_mean_202112.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1month_max_202101-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1month_max_202101.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1month_max_202101.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1month_max_202102-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1month_max_202102.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1month_max_202102.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1month_max_202103-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1month_max_202103.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1month_max_202103.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1month_max_202104-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1month_max_202104.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1month_max_202104.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1month_max_202105-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1month_max_202105.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1month_max_202105.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1month_max_202106-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1month_max_202106.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1month_max_202106.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1month_max_202107-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1month_max_202107.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1month_max_202107.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1month_max_202108-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1month_max_202108.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1month_max_202108.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1month_max_202109-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1month_max_202109.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1month_max_202109.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1month_max_202110-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1month_max_202110.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1month_max_202110.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1month_max_202111-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1month_max_202111.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1month_max_202111.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1month_max_202112-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1month_max_202112.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1month_max_202112.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1month_mean_202101-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1month_mean_202101.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1month_mean_202101.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1month_mean_202102-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1month_mean_202102.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1month_mean_202102.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1month_mean_202103-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1month_mean_202103.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1month_mean_202103.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1month_mean_202104-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1month_mean_202104.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1month_mean_202104.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1month_mean_202105-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1month_mean_202105.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1month_mean_202105.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1month_mean_202106-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1month_mean_202106.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1month_mean_202106.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1month_mean_202107-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1month_mean_202107.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1month_mean_202107.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1month_mean_202108-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1month_mean_202108.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1month_mean_202108.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1month_mean_202109-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1month_mean_202109.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1month_mean_202109.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1month_mean_202110-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1month_mean_202110.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1month_mean_202110.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1month_mean_202111-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1month_mean_202111.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1month_mean_202111.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1month_mean_202112-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1month_mean_202112.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1month_mean_202112.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1month_min_202101-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1month_min_202101.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1month_min_202101.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1month_min_202102-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1month_min_202102.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1month_min_202102.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1month_min_202103-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1month_min_202103.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1month_min_202103.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1month_min_202104-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1month_min_202104.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1month_min_202104.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1month_min_202105-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1month_min_202105.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1month_min_202105.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1month_min_202106-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1month_min_202106.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1month_min_202106.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1month_min_202107-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1month_min_202107.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1month_min_202107.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1month_min_202108-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1month_min_202108.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1month_min_202108.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1month_min_202109-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1month_min_202109.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1month_min_202109.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1month_min_202110-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1month_min_202110.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1month_min_202110.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1month_min_202111-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1month_min_202111.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1month_min_202111.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2021_data_1month_min_202112-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2021/water_observations_2021_data_1month_min_202112.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2021_data_1month_min_202112.csv.gz",
+      "roles": [
+        "data"
+      ]
+    }
+  }
+}

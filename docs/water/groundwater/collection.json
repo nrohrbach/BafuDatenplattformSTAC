@@ -1,0 +1,65 @@
+{
+  "type": "Collection",
+  "id": "water/groundwater",
+  "stac_version": "1.0.0",
+  "title": "Water / Groundwater",
+  "description": "BAFU Open Data: water/groundwater",
+  "license": "proprietary",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          5.9559,
+          45.8183,
+          10.4923,
+          47.8084
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "1970-01-01T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-groundwater-water-groundwater-v2026-03-17-regions-water_groundwater_regions-geojson.json",
+      "type": "application/geo+json",
+      "title": "water_groundwater_regions.geojson"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-groundwater-water-groundwater-v2026-03-17-regions-water_groundwater_regions-gpkg.json",
+      "type": "application/geo+json",
+      "title": "water_groundwater_regions.gpkg"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-groundwater-water-groundwater-v2026-03-17-regions-water_groundwater_regions_additional-zip.json",
+      "type": "application/geo+json",
+      "title": "water_groundwater_regions_additional.zip"
+    }
+  ],
+  "bafu:generated_at": "2026-07-10T05:41:41Z",
+  "bafu:item_count": 3
+}

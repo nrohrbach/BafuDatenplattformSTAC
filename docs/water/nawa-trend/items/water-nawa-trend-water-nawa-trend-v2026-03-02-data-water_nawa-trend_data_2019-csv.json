@@ -1,0 +1,86 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "water-nawa-trend-water-nawa-trend-v2026-03-02-data-water_nawa-trend_data_2019-csv",
+  "collection": "water/nawa-trend",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          5.9559,
+          45.8183
+        ],
+        [
+          10.4923,
+          45.8183
+        ],
+        [
+          10.4923,
+          47.8084
+        ],
+        [
+          5.9559,
+          47.8084
+        ],
+        [
+          5.9559,
+          45.8183
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    5.9559,
+    45.8183,
+    10.4923,
+    47.8084
+  ],
+  "properties": {
+    "title": "water_nawa-trend_data_2019.csv",
+    "datetime": "2026-03-02T00:00:00Z",
+    "created": "2026-07-10T05:41:41Z",
+    "providers": [
+      {
+        "name": "Bundesamt für Umwelt (BAFU)",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.bafu.admin.ch"
+      }
+    ]
+  },
+  "links": [
+    {
+      "rel": "self",
+      "href": "./items/water-nawa-trend-water-nawa-trend-v2026-03-02-data-water_nawa-trend_data_2019-csv.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "water_nawa-trend_data_2019-csv": {
+      "href": "https://data.bafu.admin.ch/download/water/nawa-trend/v2026-03-02/data/water_nawa-trend_data_2019.csv",
+      "type": "text/csv",
+      "title": "water_nawa-trend_data_2019.csv",
+      "roles": [
+        "data"
+      ]
+    }
+  }
+}

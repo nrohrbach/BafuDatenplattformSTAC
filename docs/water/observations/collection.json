@@ -1,0 +1,395 @@
+{
+  "type": "Collection",
+  "id": "water/observations",
+  "stac_version": "1.0.0",
+  "title": "Water / Observations",
+  "description": "BAFU Open Data: water/observations",
+  "license": "proprietary",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          5.9559,
+          45.8183,
+          10.4923,
+          47.8084
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "1970-01-01T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-stations-water_observations_stations-csv-gz.json",
+      "type": "application/geo+json",
+      "title": "water_observations_stations.csv.gz"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-1970.json",
+      "type": "application/geo+json",
+      "title": "1970"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-1971.json",
+      "type": "application/geo+json",
+      "title": "1971"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-1972.json",
+      "type": "application/geo+json",
+      "title": "1972"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-1973.json",
+      "type": "application/geo+json",
+      "title": "1973"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-1974.json",
+      "type": "application/geo+json",
+      "title": "1974"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-1975.json",
+      "type": "application/geo+json",
+      "title": "1975"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-1976.json",
+      "type": "application/geo+json",
+      "title": "1976"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-1977.json",
+      "type": "application/geo+json",
+      "title": "1977"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-1978.json",
+      "type": "application/geo+json",
+      "title": "1978"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-1979.json",
+      "type": "application/geo+json",
+      "title": "1979"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-1980.json",
+      "type": "application/geo+json",
+      "title": "1980"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-1981.json",
+      "type": "application/geo+json",
+      "title": "1981"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-1982.json",
+      "type": "application/geo+json",
+      "title": "1982"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-1983.json",
+      "type": "application/geo+json",
+      "title": "1983"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-1984.json",
+      "type": "application/geo+json",
+      "title": "1984"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-1985.json",
+      "type": "application/geo+json",
+      "title": "1985"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-1986.json",
+      "type": "application/geo+json",
+      "title": "1986"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-1987.json",
+      "type": "application/geo+json",
+      "title": "1987"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-1988.json",
+      "type": "application/geo+json",
+      "title": "1988"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-1989.json",
+      "type": "application/geo+json",
+      "title": "1989"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-1990.json",
+      "type": "application/geo+json",
+      "title": "1990"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-1991.json",
+      "type": "application/geo+json",
+      "title": "1991"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-1992.json",
+      "type": "application/geo+json",
+      "title": "1992"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-1993.json",
+      "type": "application/geo+json",
+      "title": "1993"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-1994.json",
+      "type": "application/geo+json",
+      "title": "1994"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-1995.json",
+      "type": "application/geo+json",
+      "title": "1995"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-1996.json",
+      "type": "application/geo+json",
+      "title": "1996"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-1997.json",
+      "type": "application/geo+json",
+      "title": "1997"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-1998.json",
+      "type": "application/geo+json",
+      "title": "1998"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-1999.json",
+      "type": "application/geo+json",
+      "title": "1999"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-2000.json",
+      "type": "application/geo+json",
+      "title": "2000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-2001.json",
+      "type": "application/geo+json",
+      "title": "2001"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-2002.json",
+      "type": "application/geo+json",
+      "title": "2002"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-2003.json",
+      "type": "application/geo+json",
+      "title": "2003"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-2004.json",
+      "type": "application/geo+json",
+      "title": "2004"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-2005.json",
+      "type": "application/geo+json",
+      "title": "2005"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-2006.json",
+      "type": "application/geo+json",
+      "title": "2006"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-2007.json",
+      "type": "application/geo+json",
+      "title": "2007"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-2008.json",
+      "type": "application/geo+json",
+      "title": "2008"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-2009.json",
+      "type": "application/geo+json",
+      "title": "2009"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-2010.json",
+      "type": "application/geo+json",
+      "title": "2010"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-2011.json",
+      "type": "application/geo+json",
+      "title": "2011"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-2012.json",
+      "type": "application/geo+json",
+      "title": "2012"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-2013.json",
+      "type": "application/geo+json",
+      "title": "2013"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-2014.json",
+      "type": "application/geo+json",
+      "title": "2014"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-2015.json",
+      "type": "application/geo+json",
+      "title": "2015"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-2016.json",
+      "type": "application/geo+json",
+      "title": "2016"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-2017.json",
+      "type": "application/geo+json",
+      "title": "2017"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-2018.json",
+      "type": "application/geo+json",
+      "title": "2018"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-2019.json",
+      "type": "application/geo+json",
+      "title": "2019"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-2020.json",
+      "type": "application/geo+json",
+      "title": "2020"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-2021.json",
+      "type": "application/geo+json",
+      "title": "2021"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-2022.json",
+      "type": "application/geo+json",
+      "title": "2022"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-2023.json",
+      "type": "application/geo+json",
+      "title": "2023"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-2024.json",
+      "type": "application/geo+json",
+      "title": "2024"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-2025.json",
+      "type": "application/geo+json",
+      "title": "2025"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-observations-water-observations-live-data-2026.json",
+      "type": "application/geo+json",
+      "title": "2026"
+    }
+  ],
+  "bafu:generated_at": "2026-07-10T05:41:41Z",
+  "bafu:item_count": 58
+}

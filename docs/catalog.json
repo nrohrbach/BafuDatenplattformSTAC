@@ -1,0 +1,52 @@
+{
+  "type": "Catalog",
+  "id": "bafu-opendata",
+  "stac_version": "1.0.0",
+  "title": "BAFU Open Data Downloads",
+  "description": "Statischer STAC-Katalog der Open Data Downloads des Bundesamts für Umwelt (BAFU). Quelle: https://data.bafu.admin.ch/download/",
+  "links": [
+    {
+      "rel": "self",
+      "href": "./catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "child",
+      "href": "./error.html/collection.json",
+      "type": "application/json",
+      "title": "error.html"
+    },
+    {
+      "rel": "child",
+      "href": "./index.html/collection.json",
+      "type": "application/json",
+      "title": "index.html"
+    },
+    {
+      "rel": "child",
+      "href": "./water/groundwater/collection.json",
+      "type": "application/json",
+      "title": "water/groundwater"
+    },
+    {
+      "rel": "child",
+      "href": "./water/karst-groundwater/collection.json",
+      "type": "application/json",
+      "title": "water/karst-groundwater"
+    },
+    {
+      "rel": "child",
+      "href": "./water/nawa-trend/collection.json",
+      "type": "application/json",
+      "title": "water/nawa-trend"
+    },
+    {
+      "rel": "child",
+      "href": "./water/observations/collection.json",
+      "type": "application/json",
+      "title": "water/observations"
+    }
+  ],
+  "bafu:generated_at": "2026-07-10T05:41:41Z",
+  "bafu:collection_count": 6
+}
