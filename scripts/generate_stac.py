@@ -16,7 +16,7 @@ import requests
 # ─── Konfiguration ────────────────────────────────────────────────────────────
 
 BASE_URL   = "https://data.bafu.admin.ch/download/"
-OUTPUT_DIR = Path("catalog")
+OUTPUT_DIR = Path("docs")
 
 # S3 XML Namespace
 NS = {"s3": "http://s3.amazonaws.com/doc/2006-03-01/"}
@@ -37,6 +37,11 @@ MEDIA_TYPES = {
     ".tiff":    "image/tiff",
     ".nc":      "application/x-netcdf",
     ".parquet": "application/parquet",
+    ".gz":      "application/gzip",
+    ".tar":     "application/x-tar",
+    ".7z":      "application/x-7z-compressed",
+    ".txt":     "text/plain",
+    ".html":    "text/html",
 }
 
 SESSION = requests.Session()
@@ -250,10 +255,9 @@ def main():
     # 1. Alle S3-Keys holen
     keys = crawl_all_files()
 
-    # Nur bekannte Dateiendungen behalten
-    known_ext = set(MEDIA_TYPES.keys())
-    keys = [k for k in keys if Path(k).suffix.lower() in known_ext]
-    print(f"   (davon mit bekannter Endung: {len(keys)})")
+    # Ordner-Platzhalter entfernen (enden mit /)
+    keys = [k for k in keys if not k.endswith("/")]
+    print(f"   (Dateien total: {len(keys)})")
 
     if not keys:
         print("❌ Keine Dateien gefunden!")
