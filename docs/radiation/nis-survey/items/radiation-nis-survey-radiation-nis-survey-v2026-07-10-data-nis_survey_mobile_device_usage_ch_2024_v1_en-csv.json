@@ -1,8 +1,8 @@
 {
   "type": "Feature",
   "stac_version": "1.0.0",
-  "id": "water-groundwater-water-groundwater-v2026-03-17-regions-water_groundwater_regions_additional-zip",
-  "collection": "water/groundwater",
+  "id": "radiation-nis-survey-radiation-nis-survey-v2026-07-10-data-nis_survey_mobile_device_usage_ch_2024_v1_en-csv",
+  "collection": "radiation/nis-survey",
   "geometry": {
     "type": "Polygon",
     "coordinates": [
@@ -37,8 +37,8 @@
     47.8084
   ],
   "properties": {
-    "title": "water_groundwater_regions_additional.zip",
-    "datetime": "2026-03-17T00:00:00Z",
+    "title": "nis_survey_mobile_device_usage_ch_2024_v1_EN.csv",
+    "datetime": "2026-07-10T00:00:00Z",
     "created": "2026-07-10T09:45:50Z",
     "providers": [
       {
@@ -54,7 +54,7 @@
   "links": [
     {
       "rel": "self",
-      "href": "./items/water-groundwater-water-groundwater-v2026-03-17-regions-water_groundwater_regions_additional-zip.json",
+      "href": "./items/radiation-nis-survey-radiation-nis-survey-v2026-07-10-data-nis_survey_mobile_device_usage_ch_2024_v1_en-csv.json",
       "type": "application/geo+json"
     },
     {
@@ -74,10 +74,10 @@
     }
   ],
   "assets": {
-    "water_groundwater_regions_additional-zip": {
-      "href": "https://data.bafu.admin.ch/download/water/groundwater/v2026-03-17/regions/water_groundwater_regions_additional.zip",
-      "type": "application/zip",
-      "title": "water_groundwater_regions_additional.zip",
+    "nis_survey_mobile_device_usage_ch_2024_v1_en-csv": {
+      "href": "https://data.bafu.admin.ch/download/radiation/nis-survey/v2026-07-10/data/nis_survey_mobile_device_usage_ch_2024_v1_EN.csv",
+      "type": "text/csv",
+      "title": "nis_survey_mobile_device_usage_ch_2024_v1_EN.csv",
       "roles": [
         "data"
       ]

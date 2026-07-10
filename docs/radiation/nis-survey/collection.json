@@ -1,9 +1,9 @@
 {
   "type": "Collection",
-  "id": "water/groundwater",
+  "id": "radiation/nis-survey",
   "stac_version": "1.0.0",
-  "title": "Water / Groundwater",
-  "description": "BAFU Open Data: water/groundwater",
+  "title": "Radiation / Nis Survey",
+  "description": "BAFU Open Data: radiation/nis-survey",
   "license": "proprietary",
   "extent": {
     "spatial": {
@@ -43,23 +43,11 @@
     },
     {
       "rel": "item",
-      "href": "./items/water-groundwater-water-groundwater-v2026-03-17-regions-water_groundwater_regions-geojson.json",
+      "href": "./items/radiation-nis-survey-radiation-nis-survey-v2026-07-10-data-nis_survey_mobile_device_usage_ch_2024_v1_en-csv.json",
       "type": "application/geo+json",
-      "title": "water_groundwater_regions.geojson"
-    },
-    {
-      "rel": "item",
-      "href": "./items/water-groundwater-water-groundwater-v2026-03-17-regions-water_groundwater_regions-gpkg.json",
-      "type": "application/geo+json",
-      "title": "water_groundwater_regions.gpkg"
-    },
-    {
-      "rel": "item",
-      "href": "./items/water-groundwater-water-groundwater-v2026-03-17-regions-water_groundwater_regions_additional-zip.json",
-      "type": "application/geo+json",
-      "title": "water_groundwater_regions_additional.zip"
+      "title": "nis_survey_mobile_device_usage_ch_2024_v1_EN.csv"
     }
   ],
   "bafu:generated_at": "2026-07-10T09:45:50Z",
-  "bafu:item_count": 3
+  "bafu:item_count": 1
 }

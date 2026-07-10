@@ -12,6 +12,12 @@
     },
     {
       "rel": "child",
+      "href": "./radiation/nis-survey/collection.json",
+      "type": "application/json",
+      "title": "radiation/nis-survey"
+    },
+    {
+      "rel": "child",
       "href": "./water/groundwater/collection.json",
       "type": "application/json",
       "title": "water/groundwater"
@@ -35,6 +41,6 @@
       "title": "water/observations"
     }
   ],
-  "bafu:generated_at": "2026-07-10T08:55:05Z",
-  "bafu:collection_count": 4
+  "bafu:generated_at": "2026-07-10T09:45:50Z",
+  "bafu:collection_count": 5
 }
