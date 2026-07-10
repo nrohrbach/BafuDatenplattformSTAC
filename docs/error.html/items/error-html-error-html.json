@@ -1,8 +1,8 @@
 {
   "type": "Feature",
   "stac_version": "1.0.0",
-  "id": "water-nawa-trend-water-nawa-trend-v2026-03-02-data-water_nawa-trend_data_2018-csv",
-  "collection": "water/nawa-trend",
+  "id": "error-html-error-html",
+  "collection": "error.html",
   "geometry": {
     "type": "Polygon",
     "coordinates": [
@@ -37,8 +37,8 @@
     47.8084
   ],
   "properties": {
-    "title": "water_nawa-trend_data_2018.csv",
-    "datetime": "2026-03-02T00:00:00Z",
+    "title": "error.html",
+    "datetime": "2026-07-10T07:13:38Z",
     "created": "2026-07-10T07:13:38Z",
     "providers": [
       {
@@ -54,7 +54,7 @@
   "links": [
     {
       "rel": "self",
-      "href": "./items/water-nawa-trend-water-nawa-trend-v2026-03-02-data-water_nawa-trend_data_2018-csv.json",
+      "href": "./items/error-html-error-html.json",
       "type": "application/geo+json"
     },
     {
@@ -74,10 +74,10 @@
     }
   ],
   "assets": {
-    "water_nawa-trend_data_2018-csv": {
-      "href": "https://data.bafu.admin.ch/download/water/nawa-trend/v2026-03-02/data/water_nawa-trend_data_2018.csv",
-      "type": "text/csv",
-      "title": "water_nawa-trend_data_2018.csv",
+    "error-html": {
+      "href": "https://data.bafu.admin.ch/download/error.html",
+      "type": "text/html",
+      "title": "error.html",
       "roles": [
         "data"
       ]

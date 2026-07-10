@@ -1,9 +1,9 @@
 {
   "type": "Collection",
-  "id": "water/groundwater",
+  "id": "error.html",
   "stac_version": "1.0.0",
-  "title": "Water / Groundwater",
-  "description": "BAFU Open Data: water/groundwater",
+  "title": "Error.Html",
+  "description": "BAFU Open Data: error.html",
   "license": "proprietary",
   "extent": {
     "spatial": {
@@ -43,23 +43,11 @@
     },
     {
       "rel": "item",
-      "href": "./items/water-groundwater-water-groundwater-v2026-03-17-regions-water_groundwater_regions-geojson.json",
+      "href": "./items/error-html-error-html.json",
       "type": "application/geo+json",
-      "title": "water_groundwater_regions.geojson"
-    },
-    {
-      "rel": "item",
-      "href": "./items/water-groundwater-water-groundwater-v2026-03-17-regions-water_groundwater_regions-gpkg.json",
-      "type": "application/geo+json",
-      "title": "water_groundwater_regions.gpkg"
-    },
-    {
-      "rel": "item",
-      "href": "./items/water-groundwater-water-groundwater-v2026-03-17-regions-water_groundwater_regions_additional-zip.json",
-      "type": "application/geo+json",
-      "title": "water_groundwater_regions_additional.zip"
+      "title": "error.html"
     }
   ],
   "bafu:generated_at": "2026-07-10T07:13:38Z",
-  "bafu:item_count": 3
+  "bafu:item_count": 1
 }
