@@ -59,7 +59,7 @@ Den Katalog öffentlich zugänglich machen:
 
 ## Automatische Aktualisierung
 
-GitHub Actions aktualisiert den Katalog jeden **Montag um 06:00 UTC** automatisch.
+GitHub Actions aktualisiert den Katalog  **täglich um 06:00 UTC** automatisch.
 Manuell auslösen: Repository → **Actions** → **STAC Katalog aktualisieren** → **Run workflow**
 
 ## Datenquelle & Lizenz
