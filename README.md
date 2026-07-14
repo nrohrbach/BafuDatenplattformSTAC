@@ -1,4 +1,4 @@
-# BafuDatenplattformSTAC
+# STAC Katalog für BAFU Datenplattform
 
 Dieses Repository generiert automatisch einen statischen [STAC-Katalog](https://stacspec.org)
 aus den Open Data Downloads des Bundesamts für Umwelt (BAFU).
