@@ -1,0 +1,503 @@
+{
+  "type": "Collection",
+  "id": "water/river-profile",
+  "stac_version": "1.0.0",
+  "title": "Water / River Profile",
+  "description": "BAFU Open Data: water/river-profile",
+  "license": "proprietary",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          5.9559,
+          45.8183,
+          10.4923,
+          47.8084
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "1970-01-01T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-full-bundle-water_river_profile_all_2026-08-12-zip.json",
+      "type": "application/geo+json",
+      "title": "water_river_profile_all_2026-08-12.zip"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-aare-ch0000370000.json",
+      "type": "application/geo+json",
+      "title": "ch0000370000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-aare-ch0000370001.json",
+      "type": "application/geo+json",
+      "title": "ch0000370001"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-aare-ch0000370005.json",
+      "type": "application/geo+json",
+      "title": "ch0000370005"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-aare-ch0000370006.json",
+      "type": "application/geo+json",
+      "title": "ch0000370006"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-aare-ch0000370007.json",
+      "type": "application/geo+json",
+      "title": "ch0000370007"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-aare-ch0000370008.json",
+      "type": "application/geo+json",
+      "title": "ch0000370008"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-aare-ch0000370009.json",
+      "type": "application/geo+json",
+      "title": "ch0000370009"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-aare-ch0000370011.json",
+      "type": "application/geo+json",
+      "title": "ch0000370011"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-aare-ch0000370012.json",
+      "type": "application/geo+json",
+      "title": "ch0000370012"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-albula-ch0002820000.json",
+      "type": "application/geo+json",
+      "title": "ch0002820000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-alpenrhein-ch0000010000.json",
+      "type": "application/geo+json",
+      "title": "ch0000010000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-alpenrhein-ch0000010007.json",
+      "type": "application/geo+json",
+      "title": "ch0000010007"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-alpenrhein-ch0000010105.json",
+      "type": "application/geo+json",
+      "title": "ch0000010105"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-bavona-ch0000520000.json",
+      "type": "application/geo+json",
+      "title": "ch0000520000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-birs-ch0004430000.json",
+      "type": "application/geo+json",
+      "title": "ch0004430000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-brenno-del-lucomagno-ch0051300000.json",
+      "type": "application/geo+json",
+      "title": "ch0051300000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-brenno-ch0000550000.json",
+      "type": "application/geo+json",
+      "title": "ch0000550000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-broye-ch0002150000.json",
+      "type": "application/geo+json",
+      "title": "ch0002150000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-broyekanal-ch0030350000.json",
+      "type": "application/geo+json",
+      "title": "ch0030350000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-doubs-ch0001350000.json",
+      "type": "application/geo+json",
+      "title": "ch0001350000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-emme-ch0004680000.json",
+      "type": "application/geo+json",
+      "title": "ch0004680000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-engelberger-aa-ch0007200000.json",
+      "type": "application/geo+json",
+      "title": "ch0007200000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-flaz-ch0088970000.json",
+      "type": "application/geo+json",
+      "title": "ch0088970000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-gadmerwasser-ch0005690000.json",
+      "type": "application/geo+json",
+      "title": "ch0005690000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-gerine-argera-ch0002320000.json",
+      "type": "application/geo+json",
+      "title": "ch0002320000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-glenner-glogn-ch0002920000.json",
+      "type": "application/geo+json",
+      "title": "ch0002920000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-hinterrhein-ch0002830000.json",
+      "type": "application/geo+json",
+      "title": "ch0002830000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-ilfis-ch0004900000.json",
+      "type": "application/geo+json",
+      "title": "ch0004900000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-inn-ch0000440000.json",
+      "type": "application/geo+json",
+      "title": "ch0000440000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-kander-ch0004300000.json",
+      "type": "application/geo+json",
+      "title": "ch0004300000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-kleine-aare-ch1316250000.json",
+      "type": "application/geo+json",
+      "title": "ch1316250000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-kleine-emme-ch0007070000.json",
+      "type": "application/geo+json",
+      "title": "ch0007070000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-landquart-ch0003130000.json",
+      "type": "application/geo+json",
+      "title": "ch0003130000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-limmat-ag5707450000.json",
+      "type": "application/geo+json",
+      "title": "ag5707450000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-limmat-ch0002940000.json",
+      "type": "application/geo+json",
+      "title": "ch0002940000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-limmat-ch0002940001.json",
+      "type": "application/geo+json",
+      "title": "ch0002940001"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-limmat-ch0002940002.json",
+      "type": "application/geo+json",
+      "title": "ch0002940002"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-linth-escherkanal-ch0024550000.json",
+      "type": "application/geo+json",
+      "title": "ch0024550000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-linth-ch0024550000.json",
+      "type": "application/geo+json",
+      "title": "ch0024550000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-linthkanal-ch0024200000.json",
+      "type": "application/geo+json",
+      "title": "ch0024200000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-linthkanal-ch0135660000.json",
+      "type": "application/geo+json",
+      "title": "ch0135660000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-lutschine-ch0005000000.json",
+      "type": "application/geo+json",
+      "title": "ch0005000000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-maggia-ch0000530000.json",
+      "type": "application/geo+json",
+      "title": "ch0000530000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-melezza-ch0000720000.json",
+      "type": "application/geo+json",
+      "title": "ch0000720000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-moesa-ch0000590000.json",
+      "type": "application/geo+json",
+      "title": "ch0000590000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-muota-ch0007400000.json",
+      "type": "application/geo+json",
+      "title": "ch0007400000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-murg-ch0006220000.json",
+      "type": "application/geo+json",
+      "title": "ch0006220000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-necker-ch0003170000.json",
+      "type": "application/geo+json",
+      "title": "ch0003170000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-reuss-ch0000380000.json",
+      "type": "application/geo+json",
+      "title": "ch0000380000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-reuss-ch0000380001.json",
+      "type": "application/geo+json",
+      "title": "ch0000380001"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-rhone-ch0000950000.json",
+      "type": "application/geo+json",
+      "title": "ch0000950000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-rotten-ch0000950000.json",
+      "type": "application/geo+json",
+      "title": "ch0000950000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-sarine-ch0002270000.json",
+      "type": "application/geo+json",
+      "title": "ch0002270000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-schwarze-lutschine-ch0005010000.json",
+      "type": "application/geo+json",
+      "title": "ch0005010000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-schwendebach-ch0004130000.json",
+      "type": "application/geo+json",
+      "title": "ch0004130000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-sense-ch0002690000.json",
+      "type": "application/geo+json",
+      "title": "ch0002690000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-sihl-ch0005770000.json",
+      "type": "application/geo+json",
+      "title": "ch0005770000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-simme-ch0004390000.json",
+      "type": "application/geo+json",
+      "title": "ch0004390000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-sitter-ch0002960000.json",
+      "type": "application/geo+json",
+      "title": "ch0002960000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-spol-ch0000500000.json",
+      "type": "application/geo+json",
+      "title": "ch0000500000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-thur-ch0002850000.json",
+      "type": "application/geo+json",
+      "title": "ch0002850000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-ticino-ch0000560000.json",
+      "type": "application/geo+json",
+      "title": "ch0000560000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-toss-ch0006240000.json",
+      "type": "application/geo+json",
+      "title": "ch0006240000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-tresa-ch0000650000.json",
+      "type": "application/geo+json",
+      "title": "ch0000650000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-tresa-ch6101160000.json",
+      "type": "application/geo+json",
+      "title": "ch6101160000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-uerbachwasser-ch0005800000.json",
+      "type": "application/geo+json",
+      "title": "ch0005800000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-usseri-aare-ch1377990000.json",
+      "type": "application/geo+json",
+      "title": "ch1377990000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-vispa-ch0001820000.json",
+      "type": "application/geo+json",
+      "title": "ch0001820000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-vorderrhein-ch0000010000.json",
+      "type": "application/geo+json",
+      "title": "ch0000010000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-waldemme-ch0005560000.json",
+      "type": "application/geo+json",
+      "title": "ch0005560000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-weissbach-ch0004120000.json",
+      "type": "application/geo+json",
+      "title": "ch0004120000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-weisse-lutschine-ch0005020000.json",
+      "type": "application/geo+json",
+      "title": "ch0005020000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-wigger-ch0005070000.json",
+      "type": "application/geo+json",
+      "title": "ch0005070000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-wildhauser-thur-ch0003420000.json",
+      "type": "application/geo+json",
+      "title": "ch0003420000"
+    },
+    {
+      "rel": "item",
+      "href": "./items/water-river-profile-water-river-profile-live-zihlkanal-ch0014110000.json",
+      "type": "application/geo+json",
+      "title": "ch0014110000"
+    }
+  ],
+  "bafu:generated_at": "2026-08-20T12:13:47Z",
+  "bafu:item_count": 76
+}

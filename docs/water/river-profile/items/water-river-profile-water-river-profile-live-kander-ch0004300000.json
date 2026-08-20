@@ -1,0 +1,206 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "water-river-profile-water-river-profile-live-kander-ch0004300000",
+  "collection": "water/river-profile",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          5.9559,
+          45.8183
+        ],
+        [
+          10.4923,
+          45.8183
+        ],
+        [
+          10.4923,
+          47.8084
+        ],
+        [
+          5.9559,
+          47.8084
+        ],
+        [
+          5.9559,
+          45.8183
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    5.9559,
+    45.8183,
+    10.4923,
+    47.8084
+  ],
+  "properties": {
+    "title": "ch0004300000",
+    "datetime": "2026-08-20T12:13:47Z",
+    "created": "2026-08-20T12:13:47Z",
+    "providers": [
+      {
+        "name": "Bundesamt für Umwelt (BAFU)",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.bafu.admin.ch"
+      }
+    ]
+  },
+  "links": [
+    {
+      "rel": "self",
+      "href": "./items/water-river-profile-water-river-profile-live-kander-ch0004300000.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "water_river_profile_benchmarks_kander_ch0004300000_gewiss_0-10000-zip": {
+      "href": "https://data.bafu.admin.ch/download/water/river-profile/live/kander/ch0004300000/GEWISS_0-10000/water_river_profile_benchmarks_kander_ch0004300000_GEWISS_0-10000.zip",
+      "type": "application/zip",
+      "title": "water_river_profile_benchmarks_kander_ch0004300000_GEWISS_0-10000.zip",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_river_profile_cross_sections_kander_ch0004300000_gewiss_0-10000-zip": {
+      "href": "https://data.bafu.admin.ch/download/water/river-profile/live/kander/ch0004300000/GEWISS_0-10000/water_river_profile_cross_sections_kander_ch0004300000_GEWISS_0-10000.zip",
+      "type": "application/zip",
+      "title": "water_river_profile_cross_sections_kander_ch0004300000_GEWISS_0-10000.zip",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_river_profile_longitudinal_profiles_kander_ch0004300000_gewiss_0-10000-zip": {
+      "href": "https://data.bafu.admin.ch/download/water/river-profile/live/kander/ch0004300000/GEWISS_0-10000/water_river_profile_longitudinal_profiles_kander_ch0004300000_GEWISS_0-10000.zip",
+      "type": "application/zip",
+      "title": "water_river_profile_longitudinal_profiles_kander_ch0004300000_GEWISS_0-10000.zip",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_river_profile_special_objects_kander_ch0004300000_gewiss_0-10000-zip": {
+      "href": "https://data.bafu.admin.ch/download/water/river-profile/live/kander/ch0004300000/GEWISS_0-10000/water_river_profile_special_objects_kander_ch0004300000_GEWISS_0-10000.zip",
+      "type": "application/zip",
+      "title": "water_river_profile_special_objects_kander_ch0004300000_GEWISS_0-10000.zip",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_river_profile_benchmarks_kander_ch0004300000_gewiss_10000-20000-zip": {
+      "href": "https://data.bafu.admin.ch/download/water/river-profile/live/kander/ch0004300000/GEWISS_10000-20000/water_river_profile_benchmarks_kander_ch0004300000_GEWISS_10000-20000.zip",
+      "type": "application/zip",
+      "title": "water_river_profile_benchmarks_kander_ch0004300000_GEWISS_10000-20000.zip",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_river_profile_cross_sections_kander_ch0004300000_gewiss_10000-20000-zip": {
+      "href": "https://data.bafu.admin.ch/download/water/river-profile/live/kander/ch0004300000/GEWISS_10000-20000/water_river_profile_cross_sections_kander_ch0004300000_GEWISS_10000-20000.zip",
+      "type": "application/zip",
+      "title": "water_river_profile_cross_sections_kander_ch0004300000_GEWISS_10000-20000.zip",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_river_profile_longitudinal_profiles_kander_ch0004300000_gewiss_10000-20000-zip": {
+      "href": "https://data.bafu.admin.ch/download/water/river-profile/live/kander/ch0004300000/GEWISS_10000-20000/water_river_profile_longitudinal_profiles_kander_ch0004300000_GEWISS_10000-20000.zip",
+      "type": "application/zip",
+      "title": "water_river_profile_longitudinal_profiles_kander_ch0004300000_GEWISS_10000-20000.zip",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_river_profile_special_objects_kander_ch0004300000_gewiss_10000-20000-zip": {
+      "href": "https://data.bafu.admin.ch/download/water/river-profile/live/kander/ch0004300000/GEWISS_10000-20000/water_river_profile_special_objects_kander_ch0004300000_GEWISS_10000-20000.zip",
+      "type": "application/zip",
+      "title": "water_river_profile_special_objects_kander_ch0004300000_GEWISS_10000-20000.zip",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_river_profile_benchmarks_kander_ch0004300000_gewiss_20000-30000-zip": {
+      "href": "https://data.bafu.admin.ch/download/water/river-profile/live/kander/ch0004300000/GEWISS_20000-30000/water_river_profile_benchmarks_kander_ch0004300000_GEWISS_20000-30000.zip",
+      "type": "application/zip",
+      "title": "water_river_profile_benchmarks_kander_ch0004300000_GEWISS_20000-30000.zip",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_river_profile_cross_sections_kander_ch0004300000_gewiss_20000-30000-zip": {
+      "href": "https://data.bafu.admin.ch/download/water/river-profile/live/kander/ch0004300000/GEWISS_20000-30000/water_river_profile_cross_sections_kander_ch0004300000_GEWISS_20000-30000.zip",
+      "type": "application/zip",
+      "title": "water_river_profile_cross_sections_kander_ch0004300000_GEWISS_20000-30000.zip",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_river_profile_longitudinal_profiles_kander_ch0004300000_gewiss_20000-30000-zip": {
+      "href": "https://data.bafu.admin.ch/download/water/river-profile/live/kander/ch0004300000/GEWISS_20000-30000/water_river_profile_longitudinal_profiles_kander_ch0004300000_GEWISS_20000-30000.zip",
+      "type": "application/zip",
+      "title": "water_river_profile_longitudinal_profiles_kander_ch0004300000_GEWISS_20000-30000.zip",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_river_profile_special_objects_kander_ch0004300000_gewiss_20000-30000-zip": {
+      "href": "https://data.bafu.admin.ch/download/water/river-profile/live/kander/ch0004300000/GEWISS_20000-30000/water_river_profile_special_objects_kander_ch0004300000_GEWISS_20000-30000.zip",
+      "type": "application/zip",
+      "title": "water_river_profile_special_objects_kander_ch0004300000_GEWISS_20000-30000.zip",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_river_profile_benchmarks_kander_ch0004300000_gewiss_30000-40000-zip": {
+      "href": "https://data.bafu.admin.ch/download/water/river-profile/live/kander/ch0004300000/GEWISS_30000-40000/water_river_profile_benchmarks_kander_ch0004300000_GEWISS_30000-40000.zip",
+      "type": "application/zip",
+      "title": "water_river_profile_benchmarks_kander_ch0004300000_GEWISS_30000-40000.zip",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_river_profile_cross_sections_kander_ch0004300000_gewiss_30000-40000-zip": {
+      "href": "https://data.bafu.admin.ch/download/water/river-profile/live/kander/ch0004300000/GEWISS_30000-40000/water_river_profile_cross_sections_kander_ch0004300000_GEWISS_30000-40000.zip",
+      "type": "application/zip",
+      "title": "water_river_profile_cross_sections_kander_ch0004300000_GEWISS_30000-40000.zip",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_river_profile_longitudinal_profiles_kander_ch0004300000_gewiss_30000-40000-zip": {
+      "href": "https://data.bafu.admin.ch/download/water/river-profile/live/kander/ch0004300000/GEWISS_30000-40000/water_river_profile_longitudinal_profiles_kander_ch0004300000_GEWISS_30000-40000.zip",
+      "type": "application/zip",
+      "title": "water_river_profile_longitudinal_profiles_kander_ch0004300000_GEWISS_30000-40000.zip",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_river_profile_special_objects_kander_ch0004300000_gewiss_30000-40000-zip": {
+      "href": "https://data.bafu.admin.ch/download/water/river-profile/live/kander/ch0004300000/GEWISS_30000-40000/water_river_profile_special_objects_kander_ch0004300000_GEWISS_30000-40000.zip",
+      "type": "application/zip",
+      "title": "water_river_profile_special_objects_kander_ch0004300000_GEWISS_30000-40000.zip",
+      "roles": [
+        "data"
+      ]
+    }
+  }
+}
