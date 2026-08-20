@@ -75,7 +75,7 @@ GROUPING_RULES = {
 _retry = Retry(
     total=5,
     backoff_factor=2,           # Wartezeiten: 2s, 4s, 8s, 16s, 32s
-    status_forcelist=[429, 500, 502, 503, 504],
+    status_forcelist=[403, 429, 500, 502, 503, 504],
     allowed_methods=["GET"],
     raise_on_status=False,      # raise_for_status bleibt manuell
 )
@@ -117,11 +117,68 @@ def s3_list(prefix: str = "") -> tuple[list[str], list[str]]:
     return files, folders
 
 
+def s3_list_flat(prefix: str) -> list[str]:
+    """
+    Listet ALLE Dateien unter einem Prefix rekursiv in einem (paginierten)
+    Rutsch — ohne delimiter, also ohne Ordner-für-Ordner-Rekursion.
+    Wird verwendet sobald ein Prefix die Zieltiefe einer GROUPING_RULES-Regel
+    erreicht hat, damit tief verschachtelte Baumstrukturen (z.B. hunderte
+    GEWISS-Segmente pro Station) nicht hunderte einzelne Requests brauchen.
+    """
+    files, token = [], None
+    while True:
+        params = {"list-type": "2", "prefix": prefix}
+        if token:
+            params["continuation-token"] = token
+        resp = SESSION.get(BASE_URL, params=params, timeout=(10, 60))
+        if not resp.ok:
+            print(
+                f"  ❌ HTTP {resp.status_code} für prefix='{prefix}' (flat) "
+                f"— Body: {resp.text[:300]}"
+            )
+        resp.raise_for_status()
+        time.sleep(THROTTLE_SECONDS)
+        root = ET.fromstring(resp.content)
+        for obj in root.findall("s3:Contents", NS):
+            key = obj.findtext("s3:Key", namespaces=NS) or ""
+            if not key.endswith("/"):
+                files.append(key)
+        is_truncated = root.findtext("s3:IsTruncated", namespaces=NS) or ""
+        if is_truncated.lower() == "true":
+            token = root.findtext("s3:NextContinuationToken", namespaces=NS)
+        else:
+            break
+    return files
+
+
 def crawl_all_files() -> list[str]:
     print("🔍 Crawle S3-Bucket ...")
     all_files, skipped, queue = [], [], [""]
     while queue:
         prefix = queue.pop(0)
+
+        # Sobald ein Prefix die Zieltiefe einer Gruppierungsregel erreicht
+        # hat (z.B. eine Station bei river-profile), alle Dateien darunter
+        # flach holen statt Ordner für Ordner weiter zu rekursieren.
+        rule = find_grouping_rule(prefix) if prefix else None
+        if rule:
+            rule_prefix, depth = rule
+            parts = prefix.rstrip("/").split("/")
+            if len(parts) - 1 >= depth:
+                print(f"  📁 {prefix} (flat)")
+                try:
+                    files = s3_list_flat(prefix)
+                except requests.exceptions.HTTPError as exc:
+                    status = exc.response.status_code if exc.response is not None else "?"
+                    if status == 403:
+                        print(f"     ⚠️  403 Forbidden — Prefix übersprungen")
+                        skipped.append(prefix)
+                        continue
+                    raise
+                all_files.extend(files)
+                print(f"     → {len(files)} Dateien (flat gelistet)")
+                continue
+
         print(f"  📁 {prefix or '(root)'}")
         try:
             files, folders = s3_list(prefix)
