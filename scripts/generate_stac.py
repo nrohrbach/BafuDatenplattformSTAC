@@ -12,16 +12,20 @@ Gruppierungslogik:
 
 import json
 import re
+import time
 import xml.etree.ElementTree as ET
 from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 # ─── Konfiguration ────────────────────────────────────────────────────────────
 
-BASE_URL   = "https://data.bafu.admin.ch/download/"
-OUTPUT_DIR = Path("docs")
+BASE_URL         = "https://data.bafu.admin.ch/download/"
+OUTPUT_DIR       = Path("docs")
+THROTTLE_SECONDS = 0.15   # Pause zwischen S3-Listing-Requests
 
 NS = {"s3": "http://s3.amazonaws.com/doc/2006-03-01/"}
 
@@ -61,13 +65,24 @@ MEDIA_TYPES = {
 
 GROUPING_RULES = {
     # prefix                          item_depth  item_title_part
+    # Tiefe 4 = water/observations/live/data/<Jahr>/
     "water/observations/live/data/": (4,          "Jahr"),
-    # Hier können später weitere Regeln ergänzt werden:
-    # "air/measurements/hourly/":    (3,          "Jahr"),
+    # Tiefe 4 = water/river-profile/live/<fluss>/<station>/
+    # Alle GEWISS-Segmente einer Station werden zu einem Item zusammengefasst
+    "water/river-profile/live/":     (4,          "Station"),
 }
 
+_retry = Retry(
+    total=5,
+    backoff_factor=2,           # Wartezeiten: 2s, 4s, 8s, 16s, 32s
+    status_forcelist=[429, 500, 502, 503, 504],
+    allowed_methods=["GET"],
+    raise_on_status=False,      # raise_for_status bleibt manuell
+)
 SESSION = requests.Session()
 SESSION.headers["User-Agent"] = "BAFU-STAC-Generator/1.0"
+SESSION.mount("https://", HTTPAdapter(max_retries=_retry))
+SESSION.mount("http://",  HTTPAdapter(max_retries=_retry))
 
 
 # ─── S3 Listing ───────────────────────────────────────────────────────────────
@@ -78,8 +93,14 @@ def s3_list(prefix: str = "") -> tuple[list[str], list[str]]:
         params = {"list-type": "2", "delimiter": "/", "prefix": prefix}
         if token:
             params["continuation-token"] = token
-        resp = SESSION.get(BASE_URL, params=params, timeout=30)
+        resp = SESSION.get(BASE_URL, params=params, timeout=(10, 60))
+        if not resp.ok:
+            print(
+                f"  ❌ HTTP {resp.status_code} für prefix='{prefix}' "
+                f"— Body: {resp.text[:300]}"
+            )
         resp.raise_for_status()
+        time.sleep(THROTTLE_SECONDS)
         root = ET.fromstring(resp.content)
         for obj in root.findall("s3:Contents", NS):
             key = obj.findtext("s3:Key", namespaces=NS) or ""
