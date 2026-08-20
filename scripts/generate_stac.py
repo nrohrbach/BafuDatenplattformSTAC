@@ -18,6 +18,7 @@ from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 import requests
+from bs4 import BeautifulSoup
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
@@ -151,9 +152,58 @@ def s3_list_flat(prefix: str) -> list[str]:
     return files
 
 
+def discover_root_prefixes() -> list[str]:
+    """
+    Ermittelt die Toplevel-Prefixes des Buckets.
+    Strategie 1: S3 XML-Listing (list-type=2, prefix='')
+    Strategie 2: HTML-Parsing der /download/-Seite (Fallback bei 403)
+    Gibt eine Liste von Prefixes zurück, z.B. ['water/', 'radiation/']
+    Wirft RuntimeError wenn beide Strategien scheitern.
+    """
+    # Strategie 1: S3 XML
+    print("  🔎 Versuche S3 XML Root-Listing ...")
+    try:
+        _, folders = s3_list("")
+        if folders:
+            print(f"     ✅ S3 XML: {len(folders)} Toplevel-Ordner gefunden")
+            return folders
+        # Leere Antwort ohne Fehler → trotzdem Fallback
+        print("     ⚠️  S3 XML: Keine Ordner zurückgegeben — versuche HTML-Fallback")
+    except requests.exceptions.HTTPError as exc:
+        status = exc.response.status_code if exc.response is not None else "?"
+        print(f"     ⚠️  S3 XML: HTTP {status} — versuche HTML-Fallback")
+
+    # Strategie 2: HTML-Parsing
+    print("  🔎 Versuche HTML-Parsing von Root-URL ...")
+    resp = SESSION.get(BASE_URL, timeout=(10, 30))
+    if not resp.ok:
+        raise RuntimeError(
+            f"Root-Discovery fehlgeschlagen: S3 XML gab 403, "
+            f"HTML-Fallback gab HTTP {resp.status_code}. "
+            f"Bucket-Struktur manuell prüfen."
+        )
+    soup = BeautifulSoup(resp.text, "html.parser")
+    prefixes = []
+    for a in soup.find_all("a", href=True):
+        href = a["href"].strip("/")
+        # Nur einfache Ordnernamen (kein /, kein .): water, radiation, air, ...
+        if href and "/" not in href and "." not in href:
+            prefixes.append(href + "/")
+    prefixes = sorted(set(prefixes))
+    if not prefixes:
+        raise RuntimeError(
+            f"Root-Discovery fehlgeschlagen: HTML enthält keine erkennbaren "
+            f"Ordner-Links. Seiten-Struktur hat sich geändert. "
+            f"URL prüfen: {BASE_URL}"
+        )
+    print(f"     ✅ HTML-Fallback: {len(prefixes)} Toplevel-Ordner gefunden: {prefixes}")
+    return prefixes
+
+
 def crawl_all_files() -> list[str]:
     print("🔍 Crawle S3-Bucket ...")
-    all_files, skipped, queue = [], [], [""]
+    root_prefixes = discover_root_prefixes()
+    all_files, skipped, queue = [], [], list(root_prefixes)
     while queue:
         prefix = queue.pop(0)
 
