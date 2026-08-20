@@ -119,14 +119,27 @@ def s3_list(prefix: str = "") -> tuple[list[str], list[str]]:
 
 def crawl_all_files() -> list[str]:
     print("🔍 Crawle S3-Bucket ...")
-    all_files, queue = [], [""]
+    all_files, skipped, queue = [], [], [""]
     while queue:
         prefix = queue.pop(0)
         print(f"  📁 {prefix or '(root)'}")
-        files, folders = s3_list(prefix)
+        try:
+            files, folders = s3_list(prefix)
+        except requests.exceptions.HTTPError as exc:
+            status = exc.response.status_code if exc.response is not None else "?"
+            if status == 403:
+                print(f"     ⚠️  403 Forbidden — Prefix übersprungen")
+                skipped.append(prefix)
+                continue
+            # Alle anderen HTTP-Fehler: weiterhin abbrechen
+            raise
         all_files.extend(files)
         queue.extend(folders)
         print(f"     → {len(files)} Dateien, {len(folders)} Unterordner")
+    if skipped:
+        print(f"\n⚠️  {len(skipped)} Prefixes wegen 403 übersprungen:")
+        for p in skipped:
+            print(f"     - {p}")
     print(f"\n✅ Total: {len(all_files)} Dateien gefunden.")
     return all_files
 
