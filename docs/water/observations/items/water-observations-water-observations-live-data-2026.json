@@ -39,7 +39,7 @@
   "properties": {
     "title": "2026",
     "datetime": "2026-01-01T00:00:00Z",
-    "created": "2026-09-01T10:36:06Z",
+    "created": "2026-09-02T10:01:09Z",
     "providers": [
       {
         "name": "Bundesamt für Umwelt (BAFU)",
@@ -270,6 +270,14 @@
       "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2026/water_observations_2026_data_1day_mean_202608.csv.gz",
       "type": "application/gzip",
       "title": "water_observations_2026_data_1day_mean_202608.csv.gz",
+      "roles": [
+        "data"
+      ]
+    },
+    "water_observations_2026_data_1day_mean_202609-csv-gz": {
+      "href": "https://data.bafu.admin.ch/download/water/observations/live/data/2026/water_observations_2026_data_1day_mean_202609.csv.gz",
+      "type": "application/gzip",
+      "title": "water_observations_2026_data_1day_mean_202609.csv.gz",
       "roles": [
         "data"
       ]
