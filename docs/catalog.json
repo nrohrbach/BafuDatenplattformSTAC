@@ -12,6 +12,12 @@
     },
     {
       "rel": "child",
+      "href": "./hazard/insar/collection.json",
+      "type": "application/json",
+      "title": "hazard/insar"
+    },
+    {
+      "rel": "child",
       "href": "./radiation/nis-survey/collection.json",
       "type": "application/json",
       "title": "radiation/nis-survey"
@@ -47,6 +53,6 @@
       "title": "water/river-profile"
     }
   ],
-  "bafu:generated_at": "2026-09-16T10:21:44Z",
-  "bafu:collection_count": 6
+  "bafu:generated_at": "2026-09-17T10:31:02Z",
+  "bafu:collection_count": 7
 }
