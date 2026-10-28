@@ -18,6 +18,12 @@
     },
     {
       "rel": "child",
+      "href": "./radiation/magnet-field-data/collection.json",
+      "type": "application/json",
+      "title": "radiation/magnet-field-data"
+    },
+    {
+      "rel": "child",
       "href": "./radiation/nis-survey/collection.json",
       "type": "application/json",
       "title": "radiation/nis-survey"
@@ -53,6 +59,6 @@
       "title": "water/river-profile"
     }
   ],
-  "bafu:generated_at": "2026-10-27T11:07:55Z",
-  "bafu:collection_count": 7
+  "bafu:generated_at": "2026-10-28T11:43:34Z",
+  "bafu:collection_count": 8
 }

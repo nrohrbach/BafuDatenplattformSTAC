@@ -1,0 +1,86 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "radiation-magnet-field-data-radiation-magnet-field-data-2026-radiation_magnet-field-data_2026-tif",
+  "collection": "radiation/magnet-field-data",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          5.9559,
+          45.8183
+        ],
+        [
+          10.4923,
+          45.8183
+        ],
+        [
+          10.4923,
+          47.8084
+        ],
+        [
+          5.9559,
+          47.8084
+        ],
+        [
+          5.9559,
+          45.8183
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    5.9559,
+    45.8183,
+    10.4923,
+    47.8084
+  ],
+  "properties": {
+    "title": "radiation_magnet-field-data_2026.tif",
+    "datetime": "2026-01-01T00:00:00Z",
+    "created": "2026-10-28T11:43:34Z",
+    "providers": [
+      {
+        "name": "Bundesamt für Umwelt (BAFU)",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.bafu.admin.ch"
+      }
+    ]
+  },
+  "links": [
+    {
+      "rel": "self",
+      "href": "./items/radiation-magnet-field-data-radiation-magnet-field-data-2026-radiation_magnet-field-data_2026-tif.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "radiation_magnet-field-data_2026-tif": {
+      "href": "https://data.bafu.admin.ch/download/radiation/magnet-field-data/2026/radiation_magnet-field-data_2026.tif",
+      "type": "image/tiff",
+      "title": "radiation_magnet-field-data_2026.tif",
+      "roles": [
+        "data"
+      ]
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "type": "Collection",
+  "id": "radiation/magnet-field-data",
+  "stac_version": "1.0.0",
+  "title": "Radiation / Magnet Field Data",
+  "description": "BAFU Open Data: radiation/magnet-field-data",
+  "license": "proprietary",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          5.9559,
+          45.8183,
+          10.4923,
+          47.8084
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "1970-01-01T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/radiation-magnet-field-data-radiation-magnet-field-data-2026-radiation_magnet-field-data_2026-tif.json",
+      "type": "application/geo+json",
+      "title": "radiation_magnet-field-data_2026.tif"
+    }
+  ],
+  "bafu:generated_at": "2026-10-28T11:43:34Z",
+  "bafu:item_count": 1
+}
