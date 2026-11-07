@@ -12,6 +12,12 @@
     },
     {
       "rel": "child",
+      "href": "./economy-consumption/lca/collection.json",
+      "type": "application/json",
+      "title": "economy-consumption/lca"
+    },
+    {
+      "rel": "child",
       "href": "./hazard/insar/collection.json",
       "type": "application/json",
       "title": "hazard/insar"
@@ -59,6 +65,6 @@
       "title": "water/river-profile"
     }
   ],
-  "bafu:generated_at": "2026-11-06T13:18:37Z",
-  "bafu:collection_count": 8
+  "bafu:generated_at": "2026-11-07T11:58:11Z",
+  "bafu:collection_count": 9
 }
