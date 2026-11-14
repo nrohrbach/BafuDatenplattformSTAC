@@ -1,0 +1,53 @@
+{
+  "type": "Collection",
+  "id": "climate/climate",
+  "stac_version": "1.0.0",
+  "title": "Climate / Climate",
+  "description": "BAFU Open Data: climate/climate",
+  "license": "proprietary",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          5.9559,
+          45.8183,
+          10.4923,
+          47.8084
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "1970-01-01T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "self",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/climate-climate-climate-climate-live-data-climate_climate_urban_tree_canopy_cover-csv.json",
+      "type": "application/geo+json",
+      "title": "climate_climate_urban_tree_canopy_cover.csv"
+    }
+  ],
+  "bafu:generated_at": "2026-11-14T12:34:57Z",
+  "bafu:item_count": 1
+}

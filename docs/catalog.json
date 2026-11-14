@@ -12,6 +12,12 @@
     },
     {
       "rel": "child",
+      "href": "./climate/climate/collection.json",
+      "type": "application/json",
+      "title": "climate/climate"
+    },
+    {
+      "rel": "child",
       "href": "./economy-consumption/lca/collection.json",
       "type": "application/json",
       "title": "economy-consumption/lca"
@@ -65,6 +71,6 @@
       "title": "water/river-profile"
     }
   ],
-  "bafu:generated_at": "2026-11-13T13:29:17Z",
-  "bafu:collection_count": 9
+  "bafu:generated_at": "2026-11-14T12:34:57Z",
+  "bafu:collection_count": 10
 }

@@ -1,0 +1,86 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "climate-climate-climate-climate-live-data-climate_climate_urban_tree_canopy_cover-csv",
+  "collection": "climate/climate",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          5.9559,
+          45.8183
+        ],
+        [
+          10.4923,
+          45.8183
+        ],
+        [
+          10.4923,
+          47.8084
+        ],
+        [
+          5.9559,
+          47.8084
+        ],
+        [
+          5.9559,
+          45.8183
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    5.9559,
+    45.8183,
+    10.4923,
+    47.8084
+  ],
+  "properties": {
+    "title": "climate_climate_urban_tree_canopy_cover.csv",
+    "datetime": "2026-11-14T12:34:57Z",
+    "created": "2026-11-14T12:34:57Z",
+    "providers": [
+      {
+        "name": "Bundesamt für Umwelt (BAFU)",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.bafu.admin.ch"
+      }
+    ]
+  },
+  "links": [
+    {
+      "rel": "self",
+      "href": "./items/climate-climate-climate-climate-live-data-climate_climate_urban_tree_canopy_cover-csv.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "climate_climate_urban_tree_canopy_cover-csv": {
+      "href": "https://data.bafu.admin.ch/download/climate/climate/live/data/climate_climate_urban_tree_canopy_cover.csv",
+      "type": "text/csv",
+      "title": "climate_climate_urban_tree_canopy_cover.csv",
+      "roles": [
+        "data"
+      ]
+    }
+  }
+}
