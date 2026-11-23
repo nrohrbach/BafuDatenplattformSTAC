@@ -1,0 +1,86 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "noise-immissions-noise-immissions-live-data-noise_immissions_noise_road_night_dwelling_rating_points-gpkg",
+  "collection": "noise/immissions",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          5.9559,
+          45.8183
+        ],
+        [
+          10.4923,
+          45.8183
+        ],
+        [
+          10.4923,
+          47.8084
+        ],
+        [
+          5.9559,
+          47.8084
+        ],
+        [
+          5.9559,
+          45.8183
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    5.9559,
+    45.8183,
+    10.4923,
+    47.8084
+  ],
+  "properties": {
+    "title": "noise_immissions_noise_road_night_dwelling_rating_points.gpkg",
+    "datetime": "2026-11-23T16:37:08Z",
+    "created": "2026-11-23T16:37:08Z",
+    "providers": [
+      {
+        "name": "Bundesamt für Umwelt (BAFU)",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.bafu.admin.ch"
+      }
+    ]
+  },
+  "links": [
+    {
+      "rel": "self",
+      "href": "./items/noise-immissions-noise-immissions-live-data-noise_immissions_noise_road_night_dwelling_rating_points-gpkg.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "noise_immissions_noise_road_night_dwelling_rating_points-gpkg": {
+      "href": "https://data.bafu.admin.ch/download/noise/immissions/live/data/noise_immissions_noise_road_night_dwelling_rating_points.gpkg",
+      "type": "application/geopackage+sqlite3",
+      "title": "noise_immissions_noise_road_night_dwelling_rating_points.gpkg",
+      "roles": [
+        "data"
+      ]
+    }
+  }
+}
